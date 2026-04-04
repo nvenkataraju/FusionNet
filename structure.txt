@@ -1,0 +1,60 @@
+src/
+│
+├── config/
+│   ├── db.js
+│   ├── env.js
+│   └── logger.js
+│
+├── modules/                # Feature-based modules (BEST PRACTICE)
+│   ├── user/
+│   │   ├── user.controller.js
+│   │   ├── user.service.js
+│   │   ├── user.repository.js
+│   │   ├── user.model.js
+│   │   ├── user.routes.js
+│   │   └── user.validation.js
+│   │
+│   ├── tweet/
+│   │   ├── tweet.controller.js
+│   │   ├── tweet.service.js
+│   │   ├── tweet.repository.js
+│   │   ├── tweet.model.js
+│   │   ├── tweet.routes.js
+│   │   └── tweet.validation.js
+│   │
+│   ├── auth/
+│   ├── follow/
+│   ├── like/
+│   ├── comment/
+│   └── notification/
+│
+├── middleware/
+│   ├── auth.middleware.js
+│   ├── error.middleware.js
+│   ├── rateLimit.middleware.js
+│   └── upload.middleware.js
+│
+├── utils/
+│   ├── apiResponse.js
+│   ├── asyncHandler.js
+│   ├── constants.js
+│   └── helpers.js
+│
+├── services/               # Shared services (cross-module)
+│   ├── email.service.js
+│   ├── storage.service.js   # S3 / Cloudinary
+│   ├── ai.service.js        # AI integrations (fits your domain)
+│   └── cache.service.js     # Redis
+│
+├── jobs/                   # Background jobs / queues
+│   ├── queue.js
+│   └── workers/
+│
+├── websockets/             # Real-time (notifications, live feed)
+│   └── socket.js
+│
+├── routes/
+│   └── index.js            # Combine all module routes
+│
+├── app.js                  # Express app setup
+└── server.js               # Entry point
